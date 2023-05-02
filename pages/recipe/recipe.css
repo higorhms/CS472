@@ -1,0 +1,33 @@
+body{
+  font-family: Georgia, Garamond, serif;
+  font-size: 11pt;
+}
+
+abbr{
+  border-bottom: 1px solid;
+  cursor: help;
+  text-decoration: none;
+}
+
+h1{
+  color: #A4A400;
+  text-align: center;
+  text-decoration: underline;
+  background-color: #F0F0F0;
+  font-size: 22pt;
+  font-weight: bold;
+  font-family: 'Lucida Sans Unicode', Helvetica, Arial, sans-serif;
+}
+
+h2{
+  color: #A4A400;
+  text-decoration: underline;
+  background-color: #F0F0F0;
+  font-weight: normal;
+  font-size: 18pt;
+}
+
+a{
+  color: #A4A400;
+  cursor: pointer;
+}
