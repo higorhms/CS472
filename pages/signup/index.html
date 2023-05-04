@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Sign up</title>
+</head>
+<body>
+  <form>
+    <fieldset>
+      <legend>New User Signup:</legend>
+      <div class="block">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" maxlength="16">
+      </div>
+      <br>
+      <div class="block">
+        <label for="gender">Gender:</label>
+        <label for="gender">
+          <input type="radio" name="gender" id="Male" value="Male" checked>
+          Male
+        </label>
+        <label for="may">
+          <input type="radio" name="gender" id="Female" value="Female">
+          Female
+        </label>
+      </div>
+      </br>
+
+      <div class="block">
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age" maxlength="2" size="6">
+      </div>
+
+      <br>
+
+      <div class="block">
+        <label for="type">Personally type:</label>
+        <input type="text" id="type" name="type" maxlength="4" size="6">
+        <a href="">(Don't know your type?)</a>
+      </div>
+
+      </br>
+
+      <div class="block">
+        <label for="os">Favorite OS:</label>
+        <select name="os" id="os">
+          <option value="a1">Windows</option>
+          <option value="a2">Mac OS X</option>
+          <option value="a3">Linux</option>
+        </select>
+      </div>
+      
+      </br>
+
+      <div class="block">
+        <label for="Personally type:">Seeking age:</label>
+        <input type="text" id="min-age" name="min-age" placeholder="min" maxlength="2" size="6">
+        to
+        <input type="text" id="max-age" name="max-age" placeholder="max" maxlength="2" size="6">
+      </div>
+
+      </br>
+      <button type="submit">Sign up</button>
+    </fieldset>
+  </form>
+</body>
+</html>

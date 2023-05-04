@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Retrieve Grade</title>
+	<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="header">
+    <div class="menu">
+      <a class="item" href="../../index.html">HOME</a>
+    </div>
+    <div class="avatar-container">
+      <img class="avatar" src="https://avatars.githubusercontent.com/u/44821959?s=400&u=d7c284825e8983e43c02b4c2d29b72a7c1000478&v=4" alt="">
+    </div>
+  </div>
+
+	<h1>Retrieve your grade</h1>
+
+	<form action="http://mumstudents.org/params.php">
+		<div class="labelContainer">
+			<label for="name">Name:</label>
+			<input type="text" name="name" id="name">
+		</div>
+		<div class="labelContainer">
+			<label for="studentId">Student Id:</label>
+			<input type="text" name="studentId" id="studentId">
+		</div>
+		<div class="labelContainer">
+			<label for="assignmentId">Assignment:</label>
+			<select name="assignmentId" id="assignmentId">
+				<option value="a1">Assignment 1</option>
+				<option value="a2">Assignment 2</option>
+				<option value="a3">Assignment 3</option>
+			</select>
+		</div>
+		<div class="labelContainer">
+			<label>Entry Month:</label>
+			<label for="february">
+        <input type="radio" name="entryDate" id="february" value="february" checked>
+				February
+      </label>
+			<label for="may">
+        <input type="radio" name="entryDate" id="may" value="may">
+        May
+      </label>
+			<label for="august">
+        <input type="radio" name="entryDate" id="august" value="august">
+				August
+      </label>
+			<label for="november">
+        <input type="radio"
+         name="entryDate" 
+         id="november" 
+         value="november">November
+      </label>
+		</div>
+
+		<div class="labelContainer">
+			<label for="notLying"><input type="checkbox" name="notLying" id="notLying"> Check if you are not lying and
+				really are only looking up your own grade</label>
+		</div>
+
+		<button type="submit">Get Grade</button>
+	</form>
+  
+  <div class="bottom">
+    <a href="https://validator.w3.org/check/referer"> 
+      <img src="http://mumstudents.org/cs472/2014-09/images/w3c-html.png" alt="html validator"/>
+    </a> 
+    <a href="https://jigsaw.w3.org/css-validator/check/referer">
+      <img src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS">
+    </a>
+  </div>
+</body>
+</html>
