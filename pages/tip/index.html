@@ -8,28 +8,48 @@
 	</head>
 
 	<body>
-		<h1>
-			<img id="logo" src="https://mumstudents.org/cs472/2023-05-BL/labs/tip_calculator/calc.jpg" alt="++--**//">
-			  Tip Calculator
-		</h1>
+		<div class="header">
+      <div class="menu">
+        <a class="item" href="../../index.html">HOME</a>
+      </div>
+      <div class="avatar-container">
+        <img class="avatar" src="https://avatars.githubusercontent.com/u/44821959?s=400&u=d7c284825e8983e43c02b4c2d29b72a7c1000478&v=4" alt="">
+      </div>
+    </div>
 
-		<div>
-			<label><input id="subtotal" type="text"> $ Subtotal</label>
+		<div class="container">
+			<h1>
+				<img id="logo" src="https://mumstudents.org/cs472/2023-05-BL/labs/tip_calculator/calc.jpg" alt="++--**//">
+					Tip Calculator
+			</h1>
+	
+			<div>
+				<label><input id="subtotal" type="text"> $ Subtotal</label>
+			</div>
+	
+			<div>
+				<label><input id="tip" type="text"> % Tip</label>
+			</div>
+	
+			<div>
+				<button id="btn" onclick="calcTip();">Calculate Tip</button>
+			</div>
+	
+			<hr>
+	
+			<div>
+				<h2>Your total:</h2>
+				<p id="total">$0.00</p>
+			</div>
 		</div>
 
-		<div>
-			<label><input id="tip" type="text"> % Tip</label>
-		</div>
-
-		<div>
-			<button id="btn" onclick="calcTip();">Calculate Tip</button>
-		</div>
-
-		<hr>
-
-		<div>
-			<h2>Your total:</h2>
-			<p id="total">$0.00</p>
-		</div>
+		<div class="bottom">
+      <a href="https://validator.w3.org/check/referer"> 
+        <img src="http://mumstudents.org/cs472/2014-09/images/w3c-html.png" alt="html validator"/>
+      </a> 
+      <a href="https://jigsaw.w3.org/css-validator/check/referer">
+        <img src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS">
+      </a>
+    </div>
 	</body>
 </html>
