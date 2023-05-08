@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Text Decorator</title>
+</head>
+<body>
+  <div class="header">
+    <div class="menu">
+      <a class="item" href="../../index.html">HOME</a>
+    </div>
+    <div class="avatar-container">
+      <img class="avatar" src="https://avatars.githubusercontent.com/u/44821959?s=400&u=d7c284825e8983e43c02b4c2d29b72a7c1000478&v=4" alt="">
+    </div>
+  </div>
+
+  <div class="container" id="container">
+    <h1>Text Decorator</h1>
+		
+		<div>
+			<img src="./images/decorated.gif" alt="very decorated!">
+		</div>
+
+    <fieldset>
+      <legend>Text</legend>
+      <textarea cols="30" rows="4" id="text-area"></textarea>
+    </fieldset>
+
+    <fieldset>
+      <legend>Decoration</legend>
+      <button onclick="biggerDirectionsButton()" >Bigger Decorations!</button></br>
+      <input type="checkbox" name="bling" value="bling" onchange="applyBling()">Bling
+    </fieldset>
+  </div>
+  
+  <div class="bottom">
+    <a href="https://validator.w3.org/check/referer"> 
+      <img src="http://mumstudents.org/cs472/2014-09/images/w3c-html.png" alt="html validator"/>
+    </a> 
+    <a href="https://jigsaw.w3.org/css-validator/check/referer">
+      <img src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS">
+    </a>
+  </div>
+</body>
+<script src="decoratemytext.js"></script>
+</html>
