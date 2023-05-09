@@ -1,76 +1,71 @@
 (() => {
   "use strict";
 
-  window.onload = () => {
-    document.getElementById("start").onclick = start;
-    document.getElementById("stop").onclick = stop;
-    document.getElementById("animation").onchange = selectAnimation;
-    document.getElementById("animation-size").onchange = changeAnimationSize;
-    document.getElementById("turbo").onchange = turbo;
-  }
+  $(() => {
+    $("#start").click(start);
+    $("#stop").click(stop);
+    $("#animation").change(selectAnimation);
+    $("#animation-size").change(changeAnimationSize);
+    $("#turbo").change(turbo);
+  });
 
-  let text = null;
-  let animationResource = null;
-  let temp = null;
+  let animation = null;
   let timer = null;
   let ANIMATION_INDEX = 0;
   let ANIMATION_SPEED = 250;
   
   const animate = (speed) => {
-    text = document.getElementById("text-area");
-    animationResource = ANIMATIONS[document.getElementById("animation").value];
-    temp = animationResource.split("=====\n")
-
+    animation = ANIMATIONS[$("#animation").val()].split("=====\n")
     if (timer !== null) return;
     
     timer = setInterval(()=> {
-      if(ANIMATION_INDEX < temp.length){
-        text.value = temp[ANIMATION_INDEX]
+      if(ANIMATION_INDEX < animation.length){
+        $("#text-area").val(animation[ANIMATION_INDEX]);
         ANIMATION_INDEX++;
       }
-      if(ANIMATION_INDEX >= temp.length) ANIMATION_INDEX = 0;
+      if(ANIMATION_INDEX >= animation.length) ANIMATION_INDEX = 0;
     }, speed); 
   }
 
   const start = () => {
-    document.getElementById("start").disabled = true;
-    document.getElementById("stop").disabled = false;
-    document.getElementById("text-area").disabled = true;
-    document.getElementById("animation").disabled = true;
+    $("#start").prop('disabled', true);
+    $("#stop").prop('disabled', false);
+    $("#text-area").prop('disabled', true);
+    $("#animation").prop('disabled', true);
     animate(ANIMATION_SPEED);
   }
 
   const stop = () => {
-    document.getElementById("start").disabled = false;
-    document.getElementById("stop").disabled = true;
-    document.getElementById("text-area").disabled = false;
-    document.getElementById("animation").disabled = false;
+    $("#start").prop('disabled', false);
+    $("#stop").prop('disabled', true);
+    $("#text-area").prop('disabled', false);
+    $("#animation").prop('disabled', false);
     clearInterval(timer);
     timer = null;
   }
 
   const selectAnimation = () => {
-    let textArea = document.getElementById("text-area");
-    textArea.value = ANIMATIONS[document.getElementById("animation").value].split("=====\n")[0];
+    let textArea = $("#text-area");
+    textArea.val(ANIMATIONS[$("#animation").val()].split("=====\n")[0]);
     ANIMATION_INDEX = 0;
   }    
 
   const changeAnimationSize = () => {
-    let textSize = document.getElementById("animation-size").value;
-    document.getElementById("text-area").style.fontSize = textSize;
+    let textSize = $("#animation-size").val();
+    $("#text-area").css("font-size", textSize);
   }
 
   const turbo = () => {
-    if(document.getElementById("turbo").checked === true){
+    if($("#turbo").prop('checked')){
       ANIMATION_SPEED = 50;
       clearInterval(timer);
       timer = null;
-      if(document.getElementById("start").disabled === true){
+      if($("#start").prop('disabled')){
         animate(ANIMATION_SPEED)
       }
     }else{
       ANIMATION_SPEED = 250;
-      if(document.getElementById("start").disabled === false){
+      if(!$("#start").prop('disabled')){
         stop();
       }else{
         clearInterval(timer);
