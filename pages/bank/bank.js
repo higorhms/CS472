@@ -65,6 +65,7 @@ class Controller {
     localStorage.setItem('accounts', JSON.stringify(Controller.#accountInfoList));
     Controller.populateDropdown();
     Controller.toggleButton();
+    window.location.href='../../index.html';
   }
 
   static debit(){
@@ -85,6 +86,7 @@ class Controller {
     localStorage.setItem('accounts', JSON.stringify(Controller.#accountInfoList));
     Controller.populateDropdown();
     Controller.toggleButton();
+    window.location.href='../../index.html';
   }
 
   static refreshData(){
