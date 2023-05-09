@@ -14,7 +14,7 @@
   let temp = null;
   let timer = null;
   let ANIMATION_INDEX = 0;
-  const DEFAULT_SPEED = 250;
+  let ANIMATION_SPEED = 250;
   
   const animate = (speed) => {
     text = document.getElementById("text-area");
@@ -37,7 +37,7 @@
     document.getElementById("stop").disabled = false;
     document.getElementById("text-area").disabled = true;
     document.getElementById("animation").disabled = true;
-    animate(DEFAULT_SPEED);
+    animate(ANIMATION_SPEED);
   }
 
   const stop = () => {
@@ -61,18 +61,21 @@
   }
 
   const turbo = () => {
-    if(document.getElementById("turbo").checked === true 
-    && document.getElementById("start").disabled === true){
+    if(document.getElementById("turbo").checked === true){
+      ANIMATION_SPEED = 50;
       clearInterval(timer);
       timer = null;
-      animate(50);
+      if(document.getElementById("start").disabled === true){
+        animate(ANIMATION_SPEED)
+      }
     }else{
+      ANIMATION_SPEED = 250;
       if(document.getElementById("start").disabled === false){
         stop();
       }else{
         clearInterval(timer);
         timer = null;
-        animate(DEFAULT_SPEED);
+        animate(ANIMATION_SPEED);
       }
     }
   }
