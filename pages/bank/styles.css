@@ -62,3 +62,13 @@ textarea{
   height: 200px;
 }
 
+#buttons{
+  display: flex;
+  padding: 20px;
+}
+
+#buttons button{
+  font-size: 16pt;
+  padding: 5px;
+  width: 150px;
+}

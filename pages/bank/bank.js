@@ -64,6 +64,7 @@ class Controller {
     Controller.#accountInfoList[selectedOption.getAttribute("accountid")].deposit(Number.parseFloat(depositInput.value));
     localStorage.setItem('accounts', JSON.stringify(Controller.#accountInfoList));
     Controller.populateDropdown();
+    Controller.toggleButton();
   }
 
   static debit(){
@@ -83,6 +84,7 @@ class Controller {
     account.debit(Number.parseFloat(depositInput.value));
     localStorage.setItem('accounts', JSON.stringify(Controller.#accountInfoList));
     Controller.populateDropdown();
+    Controller.toggleButton();
   }
 
   static refreshData(){
