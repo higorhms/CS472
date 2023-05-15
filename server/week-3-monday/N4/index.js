@@ -13,7 +13,6 @@ http.createServer(function (req, res) {
     fs.readFile(`${__dirname}/${filename}`, function(err, data) {
 
     if (err) {
-      console.log(err);
       res.writeHead(404, {'Content-Type': 'text/html'});
       return res.end("404 Not Found");
     }
