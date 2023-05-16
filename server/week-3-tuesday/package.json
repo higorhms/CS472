@@ -1,0 +1,25 @@
+{
+  "name": "cs472",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/higorhms/CS472.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/higorhms/CS472/issues"
+  },
+  "homepage": "https://github.com/higorhms/CS472#readme",
+  "dependencies": {
+    "express": "4.18.2",
+    "nodemon": "2.0.22"
+  }
+}
